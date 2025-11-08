@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oil Collector Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fade-in-out {
+    0% { opacity: 0; transform: scale(0.8); }
+    10% { opacity: 1; transform: scale(1); }
+    90% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
+  }
+  .animate-fade-in-out {
+    animation: fade-in-out ease-in-out forwards;
+  }
+  
+  @keyframes golden-glow {
+    0%, 100% { filter: drop-shadow(0 0 8px #fde047); }
+    50% { filter: drop-shadow(0 0 16px #facc15); }
+  }
+  .animate-golden-glow {
+    animation: golden-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes war-glow {
+    0%, 100% { filter: drop-shadow(0 0 8px #ef4444); }
+    50% { filter: drop-shadow(0 0 16px #dc2626); }
+  }
+  .animate-war-glow {
+    animation: war-glow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes chaos-glow {
+    0%, 100% { filter: drop-shadow(0 0 10px #c084fc); }
+    50% { filter: drop-shadow(0 0 20px #a855f7); }
+  }
+  .animate-chaos-glow {
+    animation: chaos-glow 1s ease-in-out infinite;
+  }
+  
+  @keyframes moon-glow {
+    0%, 100% { filter: drop-shadow(0 0 10px #e5e7eb); }
+    50% { filter: drop-shadow(0 0 20px #ffffff); }
+  }
+  .animate-moon-glow {
+    animation: moon-glow 1.5s ease-in-out infinite;
+  }
+  
+  .starry-bg {
+    background-image:
+      radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+      radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  }
+</style>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
